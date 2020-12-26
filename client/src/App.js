@@ -3,14 +3,24 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import React from 'react';
 import Home from './components/pages/Home';
 import About from './components/pages/About';
-import Contact from './components/pages/Contact'
+import Contact from './components/pages/Contact';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Navbar from './components/layout/navbar'
+import NotFound from './components/pages/NotFound';
+import './App.css'
 function App() {
   return (
     <div className="App">
-     <h2 className="">hello world</h2>
-     <Home />
-     <About />
-     <Contact />
+      <Router>
+        {<Route component={NotFound}/> == true ?<NotFound/>:<Navbar/>}
+        <Switch>
+          <Route exact path="/" component={Home}/>
+          <Route exact path="/about" component={About}/>
+          <Route exact path="/contact" component={Contact}/>
+          <Route component={NotFound} />
+        </Switch>
+      </Router>
+
     </div>
   );
 }

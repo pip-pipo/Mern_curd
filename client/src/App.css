@@ -3,3 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+.not-found{
+  top:0;
+  position: fixed;
+  background-color: rgb(224, 194, 194);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  height: 100vh;
+}

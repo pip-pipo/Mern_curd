@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './components/layout/navbar'
 import NotFound from './components/pages/NotFound';
 import './App.css'
+import AddUser from './components/users/AddUser';
 function App() {
   return (
     <div className="App">
@@ -17,6 +18,8 @@ function App() {
           <Route exact path="/" component={Home}/>
           <Route exact path="/about" component={About}/>
           <Route exact path="/contact" component={Contact}/>
+          <Route exact path="/users/add" component={AddUser}/>
+
           <Route component={NotFound} />
         </Switch>
       </Router>
